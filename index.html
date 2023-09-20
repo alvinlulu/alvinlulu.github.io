@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倉位計算器</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引用外部CSS文件 -->
+</head>
+<body>
+    <div class="container">
+        <h2>倉位計算器</h2>
+        <label for="openway">開倉模式</label>
+        <select id="openway">
+            <option value="single">1倉 </option>
+            <option value="shitdad">3倉</option>
+        </select>
+        <label for="openPrice">開倉價格</label>
+        <input type="number" id="openPrice">
+        
+        <label for="leverage">開倉倍數</label>
+        <input type="number" id="leverage" value="20">
+        
+        <label for="margin">開倉保證金</label>
+        <input type="number" id="margin" value="10">
+        
+        <label for="direction">方向</label>
+        <select id="direction">
+            <option value="long">多</option>
+            <option value="short">空</option>
+        </select>
+        
+        <button onclick="calculatePosition()">計算</button>
+        <button onclick="clearFields()">清空</button>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>倉位</th>
+                    <th>倍數</th>
+                    <th>入場點位</th>
+                    <th>止損點位</th>
+                </tr>
+            </thead>
+            <tbody id="positionTableBody">
+                <!-- 表格內容將在計算時生成 -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="calc.js"></script> <!-- 引用外部JavaScript文件 -->
+</body>
+</html>
