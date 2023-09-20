@@ -45,6 +45,15 @@
                 <!-- 表格內容將在計算時生成 -->
             </tbody>
         </table>
+
+        <!-- 新增選項 -->
+        <label for="binance">Binance</label><input type="checkbox" id="binance" name="exchange" value="binance">
+        <label for="bybit">Bybit</label><input type="checkbox" id="bybit" name="exchange" value="bybit">
+        <label for="kine">KINE</label><input type="checkbox" id="kine" name="exchange" value="kine">
+
+        <!-- 新增市價下單按鈕 -->
+        <button onclick="placeMarketOrder()">市價下單</button>
+
     </div>
     
     <script src="calc.js"></script> <!-- 引用外部JavaScript文件 -->

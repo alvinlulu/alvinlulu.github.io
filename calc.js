@@ -86,7 +86,33 @@ function calculatePosition() {
     }
 }
 
+function placeMarketOrder() {
+    // 獲取選項元素
+    const binanceCheckbox = document.getElementById('binance');
+    const bybitCheckbox = document.getElementById('bybit');
+    const kineCheckbox = document.getElementById('kine');
 
+    // 創建一個空數組來存儲所選擇的選項
+    const selectedExchanges = [];
+
+    // 檢查哪些選項被選擇
+    if (binanceCheckbox.checked) {
+        selectedExchanges.push(binanceCheckbox.value);
+    }
+    if (bybitCheckbox.checked) {
+        selectedExchanges.push(bybitCheckbox.value);
+    }
+    if (kineCheckbox.checked) {
+        selectedExchanges.push(kineCheckbox.value);
+    }
+
+    // 在控制台輸出所選擇的選項
+    console.log('所選擇的交易所：', selectedExchanges);
+
+    // 在這裡執行API調用，使用selectedExchanges的值構建API URL
+    // 例如：https://10.1.1.0:10000/trading/?exchanges=binance&exchanges=bybit
+}
+ 
 
 
 function clearFields() {

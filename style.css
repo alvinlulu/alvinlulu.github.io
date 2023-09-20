@@ -33,3 +33,9 @@ th, td {
     padding: 8px;
     border: 1px solid #ccc;
 }
+
+/* 使用CSS來調整元素顯示為inline-block，實現同一行顯示 */
+label, input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px; /* 可以調整元素之間的間距 */
+}
